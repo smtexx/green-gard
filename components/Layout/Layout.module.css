@@ -1,0 +1,10 @@
+.contactLink {
+  color: var(--bs-white);
+  transition: color 0.2s ease;
+}
+
+@media (hover: hover) {
+  .contactLink:hover {
+    color: var(--primary);
+  }
+}
