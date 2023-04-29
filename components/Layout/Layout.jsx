@@ -1,11 +1,22 @@
+import { useEffect } from 'react';
 import { contacts } from '../../data/contacts';
 import { preparePhone } from '../../helpers/helpers';
 import Logo from '../Logo/Logo';
 import s from './Layout.module.css';
+import { useSpinner } from '../../helpers/hooks';
 
 export default function Layout({ children }) {
+  useSpinner('spinner', [children]);
+
+  useEffect(() => {
+    document.getElementById('current-year').textContent =
+      new Date().getFullYear();
+  }, [children]);
+
   return (
     <>
+      {/* Добавить <MetaTags />
+      !!!!! */}
       {/* Spinner */}
       <div
         id="spinner"
@@ -17,7 +28,6 @@ export default function Layout({ children }) {
           style={{ width: '3rem', height: '3rem' }}
         ></div>
       </div>
-
       {/* Topbar */}
       <div className="container-fluid bg-dark text-light px-0 py-2">
         <div className="row gx-0 d-none d-lg-flex">
@@ -48,33 +58,44 @@ export default function Layout({ children }) {
               </span>
               <a
                 className="btn btn-link text-light"
-                href=""
-                aria-label="facebook"
+                href={`https://www.youtube.com/c/${contacts.youtube}`}
+                aria-label="youtube"
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                <i className="fab fa-facebook-f"></i>
+                <i className="fab fa-youtube"></i>
               </a>
               <a
                 className="btn btn-link text-light"
-                href=""
+                href={`https://vk.com/${contacts.vk}`}
                 aria-label="в контакте"
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 <i className="fab fa-vk"></i>
               </a>
               <a
                 className="btn btn-link text-light"
-                href=""
-                aria-label="linked in"
+                href={`https://t.me/${contacts.telegram}`}
+                aria-label="telegram"
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                <i className="fab fa-linkedin-in"></i>
+                <i className="fab fa-telegram"></i>
               </a>
-              <a className="btn btn-link text-light" href="">
+              <a
+                className="btn btn-link text-light"
+                href={`https://www.instagram.com/${contacts.instagram}`}
+                aria-label="instagram"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 <i className="fab fa-instagram"></i>
               </a>
             </div>
           </div>
         </div>
       </div>
-
       {/* Navbar */}
       <nav className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
         <a
@@ -97,57 +118,70 @@ export default function Layout({ children }) {
         <div className="collapse navbar-collapse" id="navbarCollapse">
           <div className="navbar-nav ms-auto p-4 p-lg-0">
             <a href="index.html" className="nav-item nav-link active">
-              Home
+              Главная
             </a>
-            <a href="about.html" className="nav-item nav-link">
-              About
+            <a
+              href="index.html#services"
+              className="nav-item nav-link"
+            >
+              Услуги
             </a>
-            <a href="service.html" className="nav-item nav-link">
-              Services
-            </a>
-            <a href="project.html" className="nav-item nav-link">
-              Projects
-            </a>
+
             <div className="nav-item dropdown">
               <a
                 href="#"
                 className="nav-link dropdown-toggle"
                 data-bs-toggle="dropdown"
               >
-                Pages
+                О нас
               </a>
               <div className="dropdown-menu bg-light m-0">
-                <a href="feature.html" className="dropdown-item">
-                  Features
+                <a href="index.html#about" className="dropdown-item">
+                  Кто мы?
                 </a>
-                <a href="quote.html" className="dropdown-item">
-                  Free Quote
+                <a
+                  href="index.html#progress"
+                  className="dropdown-item"
+                >
+                  Достижения
                 </a>
-                <a href="team.html" className="dropdown-item">
-                  Our Team
+                <a
+                  href="index.html#advantages"
+                  className="dropdown-item"
+                >
+                  Преимущества
                 </a>
-                <a href="testimonial.html" className="dropdown-item">
-                  Testimonial
+                <a
+                  href="index.html#projects"
+                  className="dropdown-item"
+                >
+                  Проекты
                 </a>
-                <a href="404.html" className="dropdown-item">
-                  404 Page
+                <a href="index.html#team" className="dropdown-item">
+                  Команда
+                </a>
+                <a
+                  href="index.html#testimonials"
+                  className="dropdown-item"
+                >
+                  Отзывы
                 </a>
               </div>
             </div>
             <a href="contact.html" className="nav-item nav-link">
-              Contact
+              Контакты
             </a>
           </div>
           <a
-            href=""
+            href="index.html#quote"
             className="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block"
           >
-            Get A Quote<i className="fa fa-arrow-right ms-3"></i>
+            Рассчитать стоимость
+            <i className="fa fa-arrow-right ms-3"></i>
           </a>
         </div>
       </nav>
       <main>{children}</main>
-
       {/* Footer */}
       <div
         className="container-fluid bg-dark text-light footer mt-5 py-5 wow fadeIn"
@@ -156,114 +190,150 @@ export default function Layout({ children }) {
         <div className="container py-5">
           <div className="row g-5">
             <div className="col-lg-3 col-md-6">
-              <h4 className="text-white mb-4">Our Office</h4>
+              <h4 className="text-white mb-4">Наш офис</h4>
               <p className="mb-2">
-                <i className="fa fa-map-marker-alt me-3"></i>123
-                Street, New York, USA
+                <a
+                  className={s.contactLink}
+                  href={contacts.map}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fa fa-map-marker-alt me-3"></i>
+                  {contacts.address}
+                </a>
               </p>
               <p className="mb-2">
-                <i className="fa fa-phone-alt me-3"></i>+012 345 67890
+                <a
+                  className={s.contactLink}
+                  href={`tel:${preparePhone(contacts.phone)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fa fa-phone-alt me-3"></i>
+                  {contacts.phone}
+                </a>
               </p>
               <p className="mb-2">
-                <i className="fa fa-envelope me-3"></i>
-                info@example.com
+                <a
+                  className={s.contactLink}
+                  href={`mailto:${preparePhone(contacts.email)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fa fa-envelope me-3"></i>
+                  {contacts.email}
+                </a>
               </p>
               <div className="d-flex pt-2">
                 <a
                   className="btn btn-square btn-outline-light rounded-circle me-2"
-                  href=""
-                >
-                  <i className="fab fa-twitter"></i>
-                </a>
-                <a
-                  className="btn btn-square btn-outline-light rounded-circle me-2"
-                  href=""
-                >
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-                <a
-                  className="btn btn-square btn-outline-light rounded-circle me-2"
-                  href=""
+                  href={`https://www.youtube.com/c/${contacts.youtube}`}
+                  aria-label="youtube"
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
                   <i className="fab fa-youtube"></i>
                 </a>
                 <a
                   className="btn btn-square btn-outline-light rounded-circle me-2"
-                  href=""
+                  href={`https://vk.com/${contacts.vk}`}
+                  aria-label="в контакте"
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
-                  <i className="fab fa-linkedin-in"></i>
+                  <i className="fab fa-vk"></i>
+                </a>
+                <a
+                  className="btn btn-square btn-outline-light rounded-circle me-2"
+                  href={`https://t.me/${contacts.telegram}`}
+                  aria-label="telegram"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <i className="fab fa-telegram"></i>
+                </a>
+                <a
+                  className="btn btn-square btn-outline-light rounded-circle me-2"
+                  href={`https://www.instagram.com/${contacts.instagram}`}
+                  aria-label="instagram"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <i className="fab fa-instagram"></i>
                 </a>
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
-              <h4 className="text-white mb-4">Services</h4>
+              <h4 className="text-white mb-4">Услуги</h4>
               <a className="btn btn-link" href="">
-                Landscaping
+                Ландшафт
               </a>
               <a className="btn btn-link" href="">
-                Pruning plants
+                Дизайн
               </a>
               <a className="btn btn-link" href="">
-                Urban Gardening
+                Озеленение
               </a>
               <a className="btn btn-link" href="">
-                Garden Maintenance
+                Инженерные системы
               </a>
               <a className="btn btn-link" href="">
-                Green Technology
-              </a>
-            </div>
-            <div className="col-lg-3 col-md-6">
-              <h4 className="text-white mb-4">Quick Links</h4>
-              <a className="btn btn-link" href="">
-                About Us
-              </a>
-              <a className="btn btn-link" href="">
-                Contact Us
-              </a>
-              <a className="btn btn-link" href="">
-                Our Services
-              </a>
-              <a className="btn btn-link" href="">
-                Terms & Condition
-              </a>
-              <a className="btn btn-link" href="">
-                Support
+                Обслуживание
               </a>
             </div>
             <div className="col-lg-3 col-md-6">
-              <h4 className="text-white mb-4">Newsletter</h4>
+              <h4 className="text-white mb-4">Ссылки</h4>
+              <a className="btn btn-link" href="index.html#about">
+                О нас
+              </a>
+              <a className="btn btn-link" href="index.html#projects">
+                Проекты
+              </a>
+              <a
+                className="btn btn-link"
+                href="index.html#advantages"
+              >
+                Преимущества
+              </a>
+              <a className="btn btn-link" href="index.html#">
+                Договор
+              </a>
+              <a className="btn btn-link" href="index.html#">
+                Поддержка
+              </a>
+            </div>
+            <div className="col-lg-3 col-md-6">
+              <h4 className="text-white mb-4">Рассылка</h4>
               <p>
-                Dolor amet sit justo amet elitr clita ipsum elitr est.
+                Подпишись, чтобы получать наши акции и предложения!
               </p>
               <div className="position-relative w-100">
                 <input
                   className="form-control bg-light border-light w-100 py-3 ps-4 pe-5"
                   type="text"
-                  placeholder="Your email"
+                  placeholder="Ваш email"
                 />
                 <button
                   type="button"
-                  className="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
+                  className="btn btn-primary py-2  mt-3 me-2"
                 >
-                  SignUp
+                  Подписаться
                 </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-
       {/* Copyright */}
       <div className="container-fluid copyright py-4">
         <div className="container">
           <div className="row">
             <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-              &copy;{' '}
+              &copy; <span id="current-year"></span>{' '}
               <a className="border-bottom" href="#">
-                Your Site Name
+                GreenGard
               </a>
-              , All Right Reserved.
+              , Все права защищены.
             </div>
             <div className="col-md-6 text-center text-md-end">
               Designed By{' '}
@@ -277,11 +347,11 @@ export default function Layout({ children }) {
           </div>
         </div>
       </div>
-
       {/* To top button */}
       <a
         href="#"
         className="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"
+        aria-label="наверх"
       >
         <i className="bi bi-arrow-up"></i>
       </a>

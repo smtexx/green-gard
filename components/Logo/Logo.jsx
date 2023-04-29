@@ -8,7 +8,7 @@ export default function Logo() {
         fill="none"
         strokeWidth="2"
         viewBox="0 0 24 24"
-        stroke-linecap="round"
+        strokeLinecap="round"
         strokeLinejoin="round"
         height="1em"
         width="1em"
