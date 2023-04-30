@@ -44,12 +44,6 @@ export default function Document() {
           rel="stylesheet"
           href="lib/bootstrap/bootstrap.min.css"
         />
-
-        {/* Description */}
-        <meta
-          name="description"
-          content="GreenGard - ландшафтный дизайн и озеленение территории. Профессиональные услуги по созданию уникального дизайна сада вашей мечты. Установка систем полива, устройство водоемов и многое другое. Качественные материалы и индивидуальный подход к каждому проекту."
-        />
       </Head>
       <body>
         <Main />
