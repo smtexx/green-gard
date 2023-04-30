@@ -57,12 +57,6 @@ export default function MetaTags() {
       />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta
-        property="og:image"
-        content="https://smtexx.github.io/focus/share/android-chrome-512x512.png"
-      />
-      <meta property="og:image:width" content="512" />
-      <meta property="og:image:height" content="512" />
       <meta name="twitter:card" content="summary_large_image" />
 
       {/* Description */}
