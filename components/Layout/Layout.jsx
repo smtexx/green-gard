@@ -3,10 +3,17 @@ import { contacts } from '../../data/contacts';
 import { preparePhone } from '../../helpers/helpers';
 import Logo from '../Logo/Logo';
 import s from './Layout.module.css';
-import { useSpinner } from '../../helpers/hooks';
+import { useBSNavBar, useSpinner } from '../../helpers/hooks';
+import MetaTags from '../MetaTags/MetaTags';
 
 export default function Layout({ children }) {
   useSpinner('spinner', [children]);
+  useBSNavBar(
+    'navbarCollapse',
+    'showMenuButton',
+    'a:not([href="#"])',
+    991
+  );
 
   useEffect(() => {
     document.getElementById('current-year').textContent =
@@ -15,8 +22,8 @@ export default function Layout({ children }) {
 
   return (
     <>
-      {/* Добавить <MetaTags />
-      !!!!! */}
+      {/* Icons etc. */}
+      <MetaTags />
       {/* Spinner */}
       <div
         id="spinner"
@@ -110,6 +117,7 @@ export default function Layout({ children }) {
         <button
           type="button"
           className="navbar-toggler me-4"
+          id="showMenuButton"
           data-bs-toggle="collapse"
           data-bs-target="#navbarCollapse"
         >
