@@ -184,7 +184,7 @@ export default function Layout({ children }) {
             href="index.html#quote"
             className="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block"
           >
-            Рассчитать стоимость
+            Заявка
             <i className="fa fa-arrow-right ms-3"></i>
           </a>
         </div>
