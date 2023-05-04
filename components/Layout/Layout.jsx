@@ -176,7 +176,7 @@ export default function Layout({ children }) {
                 </a>
               </div>
             </div>
-            <a href="contact.html" className="nav-item nav-link">
+            <a href="contacts.html" className="nav-item nav-link">
               Контакты
             </a>
           </div>
