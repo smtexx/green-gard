@@ -344,12 +344,14 @@ export default function Layout({ children }) {
               , Все права защищены.
             </div>
             <div className="col-md-6 text-center text-md-end">
-              Designed By{' '}
+              Made By{' '}
               <a
                 className="border-bottom"
-                href="https://htmlcodex.com"
+                href={`mailto:${contacts.email}`}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                HTML Codex
+                SMTEXX
               </a>
             </div>
           </div>
