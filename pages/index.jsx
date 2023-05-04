@@ -1,4 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
+import {
+  FaThemeco,
+  FaUniversalAccess,
+  FaShieldAlt,
+} from 'react-icons/fa';
+
 export default function Home() {
   return (
     <>
@@ -13,31 +19,7 @@ export default function Home() {
           data-bs-ride="carousel"
         >
           <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img
-                className="w-100"
-                src="img/carousel-1.jpg"
-                alt="Image"
-              />
-              <div className="carousel-caption">
-                <div className="container">
-                  <div className="row justify-content-center">
-                    <div className="col-lg-8">
-                      <h1 className="display-1 text-white mb-5 animated slideInDown">
-                        Make Your Home Like Garden
-                      </h1>
-                      <a
-                        href=""
-                        className="btn btn-primary py-sm-3 px-sm-4"
-                      >
-                        Explore More
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="carousel-item">
+            <section className="carousel-item active">
               <img
                 className="w-100"
                 src="img/carousel-2.jpg"
@@ -46,21 +28,69 @@ export default function Home() {
               <div className="carousel-caption">
                 <div className="container">
                   <div className="row justify-content-center">
-                    <div className="col-lg-7">
+                    <div className="col-lg-8">
                       <h1 className="display-1 text-white mb-5 animated slideInDown">
-                        Create Your Own Small Garden At Home
+                        Профессиональный подход
                       </h1>
                       <a
                         href=""
                         className="btn btn-primary py-sm-3 px-sm-4"
                       >
-                        Explore More
+                        Подробнее
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </section>
+            <section className="carousel-item">
+              <img
+                className="w-100"
+                src="img/carousel-1.jpg"
+                alt="Image"
+              />
+              <div className="carousel-caption">
+                <div className="container">
+                  <div className="row justify-content-center">
+                    <div className="col-lg-7">
+                      <h1 className="display-1 text-white mb-5 animated slideInDown">
+                        Уникальный дизайн
+                      </h1>
+                      <a
+                        href=""
+                        className="btn btn-primary py-sm-3 px-sm-4"
+                      >
+                        Подробнее
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section className="carousel-item">
+              <img
+                className="w-100"
+                src="img/carousel-3.jpg"
+                alt="Image"
+              />
+              <div className="carousel-caption">
+                <div className="container">
+                  <div className="row justify-content-center">
+                    <div className="col-lg-7">
+                      <h1 className="display-1 text-white mb-5 animated slideInDown">
+                        Современные решения
+                      </h1>
+                      <a
+                        href=""
+                        className="btn btn-primary py-sm-3 px-sm-4"
+                      >
+                        Подробнее
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
           <button
             className="carousel-control-prev"
@@ -72,7 +102,7 @@ export default function Home() {
               className="carousel-control-prev-icon"
               aria-hidden="true"
             ></span>
-            <span className="visually-hidden">Previous</span>
+            <span className="visually-hidden">Предыдущее</span>
           </button>
           <button
             className="carousel-control-next"
@@ -84,7 +114,7 @@ export default function Home() {
               className="carousel-control-next-icon"
               aria-hidden="true"
             ></span>
-            <span className="visually-hidden">Next</span>
+            <span className="visually-hidden">Следующее</span>
           </button>
         </div>
       </div>
@@ -103,13 +133,11 @@ export default function Home() {
               >
                 <div className="d-flex">
                   <div className="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                    <i className="fa fa-times text-primary"></i>
+                    <i className="fa fa-dollar-sign text-primary"></i>
                   </div>
                   <div className="ps-3">
-                    <h4>No Hidden Cost</h4>
-                    <span>
-                      Clita erat ipsum lorem sit sed stet duo justo
-                    </span>
+                    <h4>Приятные цены</h4>
+                    <span>Наши услуги доступны для каждого</span>
                   </div>
                 </div>
               </div>
@@ -127,10 +155,8 @@ export default function Home() {
                     <i className="fa fa-users text-primary"></i>
                   </div>
                   <div className="ps-3">
-                    <h4>Dedicated Team</h4>
-                    <span>
-                      Clita erat ipsum lorem sit sed stet duo justo
-                    </span>
+                    <h4>Большой опыт</h4>
+                    <span>Профессионалы с большим опытом работы</span>
                   </div>
                 </div>
               </div>
@@ -145,13 +171,11 @@ export default function Home() {
               >
                 <div className="d-flex">
                   <div className="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                    <i className="fa fa-phone text-primary"></i>
+                    <i className="fa fa-file-signature text-primary"></i>
                   </div>
                   <div className="ps-3">
-                    <h4>24/7 Available</h4>
-                    <span>
-                      Clita erat ipsum lorem sit sed stet duo justo
-                    </span>
+                    <h4>Наличие договора</h4>
+                    <span>Цена и условия обговорены в договоре</span>
                   </div>
                 </div>
               </div>
@@ -161,7 +185,7 @@ export default function Home() {
       </div>
 
       {/* About */}
-      <div className="container-xxl py-5">
+      <section className="container-xxl py-5" id="about">
         <div className="container">
           <div className="row g-5 align-items-end">
             <div
@@ -179,19 +203,19 @@ export default function Home() {
               className="col-lg-6 col-md-7 wow fadeInUp"
               data-wow-delay="0.3s"
             >
-              <h1 className="display-1 text-primary mb-0">25</h1>
-              <p className="text-primary mb-4">Year of Experience</p>
+              <h1 className="display-1 text-primary mb-0">15</h1>
+              <p className="text-primary mb-4">Лет на рынке</p>
               <h1 className="display-5 mb-4">
-                We Make Your Home Like A Garden
+                Превратим участок в цветущий сад
               </h1>
               <p className="mb-4">
-                Tempor erat elitr rebum at clita. Diam dolor diam
-                ipsum sit. Aliqu diam amet diam et eos. Clita erat
-                ipsum et lorem et sit, sed stet lorem sit clita duo
-                justo magna dolore erat amet
+                Наша компания имеет богатый профессиональный опыт и
+                может предложить широкий спектр услуг, которые
+                охватывают все этапы работы - от ландшафтного дизайна
+                и инженерных систем, до ухода за садом.
               </p>
               <a className="btn btn-primary py-3 px-4" href="">
-                Explore More
+                Подробнее
               </a>
             </div>
             <div
@@ -201,21 +225,25 @@ export default function Home() {
               <div className="row g-5">
                 <div className="col-12 col-sm-6 col-lg-12">
                   <div className="border-start ps-4">
-                    <i className="fa fa-award fa-3x text-primary mb-3"></i>
-                    <h4 className="mb-3">Award Winning</h4>
+                    <i className="fa-3x text-primary mb-3">
+                      <FaThemeco />
+                    </i>
+                    <h4 className="mb-3">Только PRO</h4>
                     <span>
-                      Clita erat ipsum et lorem et sit, sed stet lorem
-                      sit clita duo justo magna
+                      Наши работники отлично знают свое дело, вы
+                      можете доверять нашему профессионализму!
                     </span>
                   </div>
                 </div>
                 <div className="col-12 col-sm-6 col-lg-12">
                   <div className="border-start ps-4">
-                    <i className="fa fa-users fa-3x text-primary mb-3"></i>
-                    <h4 className="mb-3">Dedicated Team</h4>
+                    <i className="fa-3x text-primary mb-3">
+                      <FaUniversalAccess />
+                    </i>
+                    <h4 className="mb-3">ЭКО friendly</h4>
                     <span>
-                      Clita erat ipsum et lorem et sit, sed stet lorem
-                      sit clita duo justo magna
+                      Мы используем современные безопасные в плане
+                      экологии материалы.
                     </span>
                   </div>
                 </div>
@@ -223,13 +251,14 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Facts */}
       <div
         className="container-fluid facts my-5 py-5"
         data-parallax="scroll"
         data-image-src="img/carousel-1.jpg"
+        id="progress"
       >
         <div className="container py-5">
           <div className="row g-5">
@@ -241,10 +270,10 @@ export default function Home() {
                 className="display-4 text-white"
                 data-toggle="counter-up"
               >
-                1234
+                235
               </h1>
               <span className="fs-5 fw-semi-bold text-light">
-                Happy Clients
+                Счастливых клиентов
               </span>
             </div>
             <div
@@ -255,10 +284,10 @@ export default function Home() {
                 className="display-4 text-white"
                 data-toggle="counter-up"
               >
-                1234
+                281
               </h1>
               <span className="fs-5 fw-semi-bold text-light">
-                Garden Complated
+                Обустроеный участок
               </span>
             </div>
             <div
@@ -269,10 +298,10 @@ export default function Home() {
                 className="display-4 text-white"
                 data-toggle="counter-up"
               >
-                1234
+                6437
               </h1>
               <span className="fs-5 fw-semi-bold text-light">
-                Dedicated Staff
+                Высаженных растений
               </span>
             </div>
             <div
@@ -283,10 +312,10 @@ export default function Home() {
                 className="display-4 text-white"
                 data-toggle="counter-up"
               >
-                1234
+                384
               </h1>
               <span className="fs-5 fw-semi-bold text-light">
-                Awards Achieved
+                Посаженных деревьев
               </span>
             </div>
           </div>
@@ -302,19 +331,19 @@ export default function Home() {
               data-wow-delay="0.1s"
             >
               <p className="fs-5 fw-bold text-primary">
-                Why Choosing Us!
+                Почему нам доверяют
               </p>
               <h1 className="display-5 mb-4">
-                Few Reasons Why People Choosing Us!
+                Несколько причин, почему стоит работать с нами
               </h1>
               <p className="mb-4">
-                Tempor erat elitr rebum at clita. Diam dolor diam
-                ipsum sit. Aliqu diam amet diam et eos. Clita erat
-                ipsum et lorem et sit, sed stet lorem sit clita duo
-                justo magna dolore erat amet
+                Наша компания стремится к тому, чтобы каждый клиент
+                был полностью доволен нашими услугами. Мы работаем на
+                результат и готовы сделать все возможное, чтобы
+                обеспечить полное удовлетворение наших клиентов.
               </p>
               <a className="btn btn-primary py-3 px-4" href="">
-                Explore More
+                Подробнее
               </a>
             </div>
             <div className="col-lg-6">
@@ -337,7 +366,7 @@ export default function Home() {
                         >
                           <i className="fa fa-check fa-3x text-primary"></i>
                         </div>
-                        <h4 className="mb-0">100% Satisfaction</h4>
+                        <h4 className="mb-0">Опыт и квалификация</h4>
                       </div>
                     </div>
                     <div
@@ -354,9 +383,11 @@ export default function Home() {
                           className="btn-square bg-light rounded-circle mx-auto mb-4"
                           style={{ width: '90px', height: '90px' }}
                         >
-                          <i className="fa fa-users fa-3x text-primary"></i>
+                          <i className="fa fa-3x text-primary">
+                            <FaShieldAlt />
+                          </i>
                         </div>
-                        <h4 className="mb-0">Dedicated Team</h4>
+                        <h4 className="mb-0">Длительная гарантия</h4>
                       </div>
                     </div>
                   </div>
@@ -375,7 +406,7 @@ export default function Home() {
                     >
                       <i className="fa fa-tools fa-3x text-primary"></i>
                     </div>
-                    <h4 className="mb-0">Modern Equipment</h4>
+                    <h4 className="mb-0">Современное оборудование</h4>
                   </div>
                 </div>
               </div>
@@ -385,16 +416,16 @@ export default function Home() {
       </div>
 
       {/* Service */}
-      <div className="container-xxl py-5">
+      <div className="container-xxl py-5" id="services">
         <div className="container">
           <div
             className="text-center mx-auto wow fadeInUp"
             data-wow-delay="0.1s"
             style={{ maxWidth: '500px' }}
           >
-            <p className="fs-5 fw-bold text-primary">Our Services</p>
+            <p className="fs-5 fw-bold text-primary">Наши услуги</p>
             <h1 className="display-5 mb-5">
-              Services That We Offer For You
+              Доверьтесь профессионалам
             </h1>
           </div>
           <div className="row g-4">
@@ -418,14 +449,14 @@ export default function Home() {
                       alt="Icon"
                     />
                   </div>
-                  <h4 className="mb-3">Landscaping</h4>
+                  <h4 className="mb-3">Ландшафт</h4>
                   <p className="mb-4">
-                    Erat ipsum justo amet duo et elitr dolor, est duo
-                    duo eos lorem sed diam stet diam sed stet.
+                    Спланируем ландшафт вашего участка, с учетом
+                    особенностей и потребностей
                   </p>
                   <a className="btn btn-sm" href="">
                     <i className="fa fa-plus text-primary me-2"></i>
-                    Read More
+                    Подробнее
                   </a>
                 </div>
               </div>
@@ -450,14 +481,14 @@ export default function Home() {
                       alt="Icon"
                     />
                   </div>
-                  <h4 className="mb-3">Pruning plants</h4>
+                  <h4 className="mb-3">Уход</h4>
                   <p className="mb-4">
-                    Erat ipsum justo amet duo et elitr dolor, est duo
-                    duo eos lorem sed diam stet diam sed stet.
+                    Выполним обрезку деревьев, стрижку газона,
+                    обработку растений от вредителей
                   </p>
                   <a className="btn btn-sm" href="">
                     <i className="fa fa-plus text-primary me-2"></i>
-                    Read More
+                    Подробнее
                   </a>
                 </div>
               </div>
@@ -482,14 +513,14 @@ export default function Home() {
                       alt="Icon"
                     />
                   </div>
-                  <h4 className="mb-3">Irrigation & Drainage</h4>
+                  <h4 className="mb-3">Полив</h4>
                   <p className="mb-4">
-                    Erat ipsum justo amet duo et elitr dolor, est duo
-                    duo eos lorem sed diam stet diam sed stet.
+                    Спроектируем и выполним монтаж инженерных систем
+                    для полива и ухода
                   </p>
                   <a className="btn btn-sm" href="">
                     <i className="fa fa-plus text-primary me-2"></i>
-                    Read More
+                    Подробнее
                   </a>
                 </div>
               </div>
@@ -514,14 +545,14 @@ export default function Home() {
                       alt="Icon"
                     />
                   </div>
-                  <h4 className="mb-3">Garden Maintenance </h4>
+                  <h4 className="mb-3">Озеленение</h4>
                   <p className="mb-4">
-                    Erat ipsum justo amet duo et elitr dolor, est duo
-                    duo eos lorem sed diam stet diam sed stet.
+                    Создадим проект озеленения, подберем и высадим
+                    подходящие растения
                   </p>
                   <a className="btn btn-sm" href="">
                     <i className="fa fa-plus text-primary me-2"></i>
-                    Read More
+                    Подробнее
                   </a>
                 </div>
               </div>
@@ -546,14 +577,14 @@ export default function Home() {
                       alt="Icon"
                     />
                   </div>
-                  <h4 className="mb-3">Green Technology</h4>
+                  <h4 className="mb-3">Технологии</h4>
                   <p className="mb-4">
-                    Erat ipsum justo amet duo et elitr dolor, est duo
-                    duo eos lorem sed diam stet diam sed stet.
+                    Установим современные системы управления климатом,
+                    поливом и мониторинга
                   </p>
                   <a className="btn btn-sm" href="">
                     <i className="fa fa-plus text-primary me-2"></i>
-                    Read More
+                    Подробнее
                   </a>
                 </div>
               </div>
@@ -578,14 +609,14 @@ export default function Home() {
                       alt="Icon"
                     />
                   </div>
-                  <h4 className="mb-3">Urban Gardening</h4>
+                  <h4 className="mb-3">Материалы</h4>
                   <p className="mb-4">
-                    Erat ipsum justo amet duo et elitr dolor, est duo
-                    duo eos lorem sed diam stet diam sed stet.
+                    Применим в вашем проекте экологически чистые и
+                    безопасные материалы
                   </p>
                   <a className="btn btn-sm" href="">
                     <i className="fa fa-plus text-primary me-2"></i>
-                    Read More
+                    Подробнее
                   </a>
                 </div>
               </div>
@@ -599,6 +630,7 @@ export default function Home() {
         className="container-fluid quote my-5 py-5"
         data-parallax="scroll"
         data-image-src="img/carousel-2.jpg"
+        id="quote"
       >
         <div className="container py-5">
           <div className="row justify-content-center">
@@ -608,7 +640,7 @@ export default function Home() {
                 data-wow-delay="0.5s"
               >
                 <h1 className="display-5 text-center mb-5">
-                  Get A Free Quote
+                  Отправить заявку
                 </h1>
                 <div className="row g-3">
                   <div className="col-sm-6">
@@ -617,9 +649,9 @@ export default function Home() {
                         type="text"
                         className="form-control bg-light border-0"
                         id="gname"
-                        placeholder="Gurdian Name"
+                        placeholder="Ваше имя"
                       />
-                      <label for="gname">Your Name</label>
+                      <label htmlFor="gname">Ваше имя</label>
                     </div>
                   </div>
                   <div className="col-sm-6">
@@ -628,9 +660,9 @@ export default function Home() {
                         type="email"
                         className="form-control bg-light border-0"
                         id="gmail"
-                        placeholder="Gurdian Email"
+                        placeholder="Ваш Email"
                       />
-                      <label for="gmail">Your Email</label>
+                      <label htmlFor="gmail">Ваш Email</label>
                     </div>
                   </div>
                   <div className="col-sm-6">
@@ -639,9 +671,9 @@ export default function Home() {
                         type="text"
                         className="form-control bg-light border-0"
                         id="cname"
-                        placeholder="Child Name"
+                        placeholder="Телефон"
                       />
-                      <label for="cname">Your Mobile</label>
+                      <label htmlFor="cname">Телефон</label>
                     </div>
                   </div>
                   <div className="col-sm-6">
@@ -650,20 +682,22 @@ export default function Home() {
                         type="text"
                         className="form-control bg-light border-0"
                         id="cage"
-                        placeholder="Child Age"
+                        placeholder="Интересующая услуга"
                       />
-                      <label for="cage">Service Type</label>
+                      <label htmlFor="cage">
+                        Интересующая услуга
+                      </label>
                     </div>
                   </div>
                   <div className="col-12">
                     <div className="form-floating">
                       <textarea
                         className="form-control bg-light border-0"
-                        placeholder="Leave a message here"
+                        placeholder="Текст сообщения"
                         id="message"
                         style={{ height: '100px' }}
                       ></textarea>
-                      <label for="message">Message</label>
+                      <label htmlFor="message">Текст сообщения</label>
                     </div>
                   </div>
                   <div className="col-12 text-center">
@@ -671,7 +705,7 @@ export default function Home() {
                       className="btn btn-primary py-3 px-4"
                       type="submit"
                     >
-                      Submit Now
+                      Отправить
                     </button>
                   </div>
                 </div>
@@ -689,9 +723,11 @@ export default function Home() {
             data-wow-delay="0.1s"
             style={{ maxWidth: '500px' }}
           >
-            <p className="fs-5 fw-bold text-primary">Our Projects</p>
+            <p className="fs-5 fw-bold text-primary">
+              Выполненные проекты
+            </p>
             <h1 className="display-5 mb-5">
-              Some Of Our Wonderful Projects
+              Некоторые из наших проектов
             </h1>
           </div>
           <div className="row wow fadeInUp" data-wow-delay="0.3s">
@@ -701,13 +737,13 @@ export default function Home() {
                 id="portfolio-flters"
               >
                 <li className="mx-2 active" data-filter="*">
-                  All
+                  Все
                 </li>
                 <li className="mx-2" data-filter=".first">
-                  Complete Projects
+                  Завершенные
                 </li>
                 <li className="mx-2" data-filter=".second">
-                  Ongoing Projects
+                  Текущие
                 </li>
               </ul>
             </div>
@@ -720,15 +756,17 @@ export default function Home() {
               <div className="portfolio-inner rounded">
                 <img
                   className="img-fluid"
-                  src="img/service-1.jpg"
+                  src="img/project-1.jpg"
                   alt=""
                 />
                 <div className="portfolio-text">
-                  <h4 className="text-white mb-4">Landscaping</h4>
+                  <p className="text-white text-center fw-bold p-4">
+                    Прекрасный цветочный сад для загородного дома
+                  </p>
                   <div className="d-flex">
                     <a
                       className="btn btn-lg-square rounded-circle mx-2"
-                      href="img/service-1.jpg"
+                      href="img/project-1-big.jpg"
                       data-lightbox="portfolio"
                     >
                       <i className="fa fa-eye"></i>
@@ -750,15 +788,17 @@ export default function Home() {
               <div className="portfolio-inner rounded">
                 <img
                   className="img-fluid"
-                  src="img/service-2.jpg"
+                  src="img/project-2.jpg"
                   alt=""
                 />
                 <div className="portfolio-text">
-                  <h4 className="text-white mb-4">Pruning plants</h4>
+                  <p className="text-white text-center fw-bold p-4">
+                    Парк с мощеными дорожками и редкими деревьями
+                  </p>
                   <div className="d-flex">
                     <a
                       className="btn btn-lg-square rounded-circle mx-2"
-                      href="img/service-2.jpg"
+                      href="img/project-2-big.jpg"
                       data-lightbox="portfolio"
                     >
                       <i className="fa fa-eye"></i>
@@ -780,17 +820,17 @@ export default function Home() {
               <div className="portfolio-inner rounded">
                 <img
                   className="img-fluid"
-                  src="img/service-3.jpg"
+                  src="img/project-3.jpg"
                   alt=""
                 />
                 <div className="portfolio-text">
-                  <h4 className="text-white mb-4">
-                    Irrigation & Drainage
-                  </h4>
+                  <p className="text-white text-center fw-bold p-4">
+                    Частный парк с дизайнерскими скульптурами
+                  </p>
                   <div className="d-flex">
                     <a
                       className="btn btn-lg-square rounded-circle mx-2"
-                      href="img/service-3.jpg"
+                      href="img/project-3-big.jpg"
                       data-lightbox="portfolio"
                     >
                       <i className="fa fa-eye"></i>
@@ -812,17 +852,17 @@ export default function Home() {
               <div className="portfolio-inner rounded">
                 <img
                   className="img-fluid"
-                  src="img/service-4.jpg"
+                  src="img/project-4.jpg"
                   alt=""
                 />
                 <div className="portfolio-text">
-                  <h4 className="text-white mb-4">
-                    Garden Maintenance
-                  </h4>
+                  <p className="text-white text-center fw-bold p-4">
+                    Великолепный цветочный сад с небольшим прудом
+                  </p>
                   <div className="d-flex">
                     <a
                       className="btn btn-lg-square rounded-circle mx-2"
-                      href="img/service-4.jpg"
+                      href="img/project-4-big.jpg"
                       data-lightbox="portfolio"
                     >
                       <i className="fa fa-eye"></i>
@@ -844,17 +884,18 @@ export default function Home() {
               <div className="portfolio-inner rounded">
                 <img
                   className="img-fluid"
-                  src="img/service-5.jpg"
+                  src="img/project-5.jpg"
                   alt=""
                 />
                 <div className="portfolio-text">
-                  <h4 className="text-white mb-4">
-                    Green Technology
-                  </h4>
+                  <p className="text-white text-center fw-bold p-4">
+                    Уникальное сочетание цветов не оставляет
+                    равнодушным
+                  </p>
                   <div className="d-flex">
                     <a
                       className="btn btn-lg-square rounded-circle mx-2"
-                      href="img/service-5.jpg"
+                      href="img/project-5-big.jpg"
                       data-lightbox="portfolio"
                     >
                       <i className="fa fa-eye"></i>
@@ -876,15 +917,17 @@ export default function Home() {
               <div className="portfolio-inner rounded">
                 <img
                   className="img-fluid"
-                  src="img/service-6.jpg"
+                  src="img/project-6.jpg"
                   alt=""
                 />
                 <div className="portfolio-text">
-                  <h4 className="text-white mb-4">Urban Gardening</h4>
+                  <p className="text-white text-center fw-bold p-4">
+                    Продуманная парковая зона с превосходным газоном
+                  </p>
                   <div className="d-flex">
                     <a
                       className="btn btn-lg-square rounded-circle mx-2"
-                      href="img/service-6.jpg"
+                      href="img/project-6-big.jpg"
                       data-lightbox="portfolio"
                     >
                       <i className="fa fa-eye"></i>
@@ -911,9 +954,9 @@ export default function Home() {
             data-wow-delay="0.1s"
             style={{ maxWidth: '500px' }}
           >
-            <p className="fs-5 fw-bold text-primary">Our Team</p>
+            <p className="fs-5 fw-bold text-primary">Наша команда</p>
             <h1 className="display-5 mb-5">
-              Dedicated & Experienced Team Members
+              Профессионалы с богатым опытом
             </h1>
           </div>
           <div className="row g-4">
@@ -928,8 +971,8 @@ export default function Home() {
                   alt=""
                 />
                 <div className="team-text">
-                  <h4 className="mb-0">Doris Jordan</h4>
-                  <p className="text-primary">Landscape Designer</p>
+                  <h4 className="mb-0">Алена Денисова</h4>
+                  <p className="text-primary">Ландшафтный дизайнер</p>
                   <div className="team-social d-flex">
                     <a
                       className="btn btn-square rounded-circle me-2"
@@ -964,8 +1007,8 @@ export default function Home() {
                   alt=""
                 />
                 <div className="team-text">
-                  <h4 className="mb-0">Johnny Ramirez</h4>
-                  <p className="text-primary">Garden Designer</p>
+                  <h4 className="mb-0">Роман Захаров</h4>
+                  <p className="text-primary">Генеральный директор</p>
                   <div className="team-social d-flex">
                     <a
                       className="btn btn-square rounded-circle me-2"
@@ -1000,8 +1043,8 @@ export default function Home() {
                   alt=""
                 />
                 <div className="team-text">
-                  <h4 className="mb-0">Diana Wagner</h4>
-                  <p className="text-primary">Senior Gardener</p>
+                  <h4 className="mb-0">Диана Кросс</h4>
+                  <p className="text-primary">Дизайнер флорист</p>
                   <div className="team-social d-flex">
                     <a
                       className="btn btn-square rounded-circle me-2"
@@ -1037,18 +1080,19 @@ export default function Home() {
               className="col-lg-5 wow fadeInUp"
               data-wow-delay="0.1s"
             >
-              <p className="fs-5 fw-bold text-primary">Testimonial</p>
+              <p className="fs-5 fw-bold text-primary">Отзывы</p>
               <h1 className="display-5 mb-5">
-                What Our Clients Say About Us!
+                Что говорят наши клиенты
               </h1>
               <p className="mb-4">
-                Tempor erat elitr rebum at clita. Diam dolor diam
-                ipsum sit. Aliqu diam amet diam et eos. Clita erat
-                ipsum et lorem et sit sed stet lorem sit clita duo
-                justo.
+                За годы работы мы получили высокие оценки от сотен
+                довольных клиентов. Мнение наших клиентов отражает
+                уровень нашего профессионализма. Спасибо Вам за то,
+                что выбрали нас, мы всегда стараемся оправдать
+                оказанное доверие.
               </p>
               <a className="btn btn-primary py-3 px-4" href="">
-                See More
+                Подробнее
               </a>
             </div>
             <div
@@ -1063,13 +1107,14 @@ export default function Home() {
                     alt=""
                   />
                   <p className="fs-5">
-                    Dolores sed duo clita tempor justo dolor et stet
-                    lorem kasd labore dolore lorem ipsum. At lorem
-                    lorem magna ut et, nonumy et labore et tempor diam
-                    tempor erat.
+                    Заказывал у GreenGard дизайн внутренненго двора, и
+                    я очень доволен результатом! Дизайнеры студии
+                    создали красивое и функциональное пространство,
+                    которое соответствует моим потребностям и вкусу. Я
+                    смело могу рекомендовать GreenGard!
                   </p>
-                  <h4>Client Name</h4>
-                  <span>Profession</span>
+                  <h4>Максим Демидов</h4>
+                  <span>Бизнесмен</span>
                 </div>
                 <div className="testimonial-item">
                   <img
@@ -1078,13 +1123,45 @@ export default function Home() {
                     alt=""
                   />
                   <p className="fs-5">
-                    Dolores sed duo clita tempor justo dolor et stet
-                    lorem kasd labore dolore lorem ipsum. At lorem
-                    lorem magna ut et, nonumy et labore et tempor diam
-                    tempor erat.
+                    Я была впечатлена работой студии GreenGard.
+                    Дизайнеры проявили внимательность к моим желаниям
+                    и создали прекрасное пространство для отдыха и
+                    релаксации. Я рекомендую эту студию всем, кто ищет
+                    профессиональные услуги по ландшафтному дизайну.
                   </p>
-                  <h4>Client Name</h4>
-                  <span>Profession</span>
+                  <h4>Анна Волевич</h4>
+                  <span>Стюардесса</span>
+                </div>
+                <div className="testimonial-item">
+                  <img
+                    className="img-fluid rounded mb-3"
+                    src="img/testimonial-3.jpg"
+                    alt=""
+                  />
+                  <p className="fs-5">
+                    Сотрудники GreenGard проявили профессионализм и
+                    креативность в создании дизайна нашего парка. Мы
+                    получили прекрасно оформленную зону отдыха для
+                    семьи и гостей, где можно наслаждаться природой и
+                    проводить время с удовольствием.
+                  </p>
+                  <h4>Артур Лебедев</h4>
+                  <span>Ортодонт</span>
+                </div>
+                <div className="testimonial-item">
+                  <img
+                    className="img-fluid rounded mb-3"
+                    src="img/testimonial-4.jpg"
+                    alt=""
+                  />
+                  <p className="fs-5">
+                    Мы заказали у GreenGard дизайн нашего сада, и мы
+                    очень довольны результатом. Дизайнеры создали
+                    пространство, которое превзошло все наши ожидания,
+                    и мы наслаждаемся его красотой каждый день.
+                  </p>
+                  <h4>Татьяна Яковлева</h4>
+                  <span>Модель</span>
                 </div>
               </div>
             </div>

@@ -294,8 +294,8 @@ h6,
 }
 
 .service-item .service-text .btn {
-  width: 31px;
-  height: 31px;
+  width: 1.875rem;
+  height: 1.875rem;
   display: inline-flex;
   align-items: center;
   color: var(--dark);
@@ -303,10 +303,11 @@ h6,
   white-space: nowrap;
   overflow: hidden;
   transition: 0.3s;
+  font-weight: 700;
 }
 
 .service-item:hover .service-text .btn {
-  width: 112px;
+  width: 7.125rem;
 }
 
 /*** Project Portfolio ***/
