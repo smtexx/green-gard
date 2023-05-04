@@ -4,10 +4,10 @@ const nextConfig = {
   swcMinify: true,
   output: 'export',
   distDir: 'docs',
-  // basePath: '/green-gard',
+  basePath: '/green-gard',
   images: {
     unoptimized: true,
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
