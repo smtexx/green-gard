@@ -4,10 +4,12 @@ import {
   FaUniversalAccess,
   FaShieldAlt,
 } from 'react-icons/fa';
+import PageTitle from '../components/PageTitle/PageTitle';
 
 export default function Home() {
   return (
     <>
+      <PageTitle title="GreenGard: зеленые решения на вашей территории" />
       {/* Carousel */}
       <div
         className="container-fluid p-0 wow fadeIn"
@@ -23,7 +25,7 @@ export default function Home() {
               <img
                 className="w-100"
                 src="img/carousel-2.jpg"
-                alt="Image"
+                alt="Девушка садовник"
               />
               <div className="carousel-caption">
                 <div className="container">
@@ -47,7 +49,7 @@ export default function Home() {
               <img
                 className="w-100"
                 src="img/carousel-1.jpg"
-                alt="Image"
+                alt="Ландшафтный дизайн"
               />
               <div className="carousel-caption">
                 <div className="container">
@@ -71,7 +73,7 @@ export default function Home() {
               <img
                 className="w-100"
                 src="img/carousel-3.jpg"
-                alt="Image"
+                alt="Удаленное управление садом"
               />
               <div className="carousel-caption">
                 <div className="container">
@@ -196,7 +198,7 @@ export default function Home() {
                 className="img-fluid rounded"
                 data-wow-delay="0.1s"
                 src="img/about.jpg"
-                alt=""
+                alt="Девушка садовник"
               />
             </div>
             <div
@@ -323,7 +325,7 @@ export default function Home() {
       </div>
 
       {/* Features */}
-      <div className="container-xxl py-5">
+      <div className="container-xxl py-5" id="advantages">
         <div className="container">
           <div className="row g-5 align-items-center">
             <div
@@ -438,7 +440,7 @@ export default function Home() {
                   <img
                     className="img-fluid"
                     src="img/service-1.jpg"
-                    alt=""
+                    alt="Земляные работы"
                   />
                 </div>
                 <div className="service-text rounded p-5">
@@ -470,7 +472,7 @@ export default function Home() {
                   <img
                     className="img-fluid"
                     src="img/service-2.jpg"
-                    alt=""
+                    alt="Обрезка деревьев"
                   />
                 </div>
                 <div className="service-text rounded p-5">
@@ -502,7 +504,7 @@ export default function Home() {
                   <img
                     className="img-fluid"
                     src="img/service-3.jpg"
-                    alt=""
+                    alt="Система полива"
                   />
                 </div>
                 <div className="service-text rounded p-5">
@@ -534,7 +536,7 @@ export default function Home() {
                   <img
                     className="img-fluid"
                     src="img/service-4.jpg"
-                    alt=""
+                    alt="Девушка садовник"
                   />
                 </div>
                 <div className="service-text rounded p-5">
@@ -566,7 +568,7 @@ export default function Home() {
                   <img
                     className="img-fluid"
                     src="img/service-5.jpg"
-                    alt=""
+                    alt="Управление садом с планшета"
                   />
                 </div>
                 <div className="service-text rounded p-5">
@@ -598,7 +600,7 @@ export default function Home() {
                   <img
                     className="img-fluid"
                     src="img/service-6.jpg"
-                    alt=""
+                    alt="Эко технологии"
                   />
                 </div>
                 <div className="service-text rounded p-5">
@@ -716,7 +718,7 @@ export default function Home() {
       </div>
 
       {/* Projects */}
-      <div className="container-xxl py-5">
+      <div className="container-xxl py-5" id="projects">
         <div className="container">
           <div
             className="text-center mx-auto wow fadeInUp"
@@ -757,7 +759,7 @@ export default function Home() {
                 <img
                   className="img-fluid"
                   src="img/project-1.jpg"
-                  alt=""
+                  alt="Прекрасный цветочный сад для загородного дома"
                 />
                 <div className="portfolio-text">
                   <p className="text-white text-center fw-bold p-4">
@@ -789,7 +791,7 @@ export default function Home() {
                 <img
                   className="img-fluid"
                   src="img/project-2.jpg"
-                  alt=""
+                  alt="Парк с мощеными дорожками и редкими деревьями"
                 />
                 <div className="portfolio-text">
                   <p className="text-white text-center fw-bold p-4">
@@ -821,7 +823,7 @@ export default function Home() {
                 <img
                   className="img-fluid"
                   src="img/project-3.jpg"
-                  alt=""
+                  alt="Частный парк с дизайнерскими скульптурами"
                 />
                 <div className="portfolio-text">
                   <p className="text-white text-center fw-bold p-4">
@@ -853,7 +855,7 @@ export default function Home() {
                 <img
                   className="img-fluid"
                   src="img/project-4.jpg"
-                  alt=""
+                  alt="Великолепный цветочный сад с небольшим прудом"
                 />
                 <div className="portfolio-text">
                   <p className="text-white text-center fw-bold p-4">
@@ -885,7 +887,8 @@ export default function Home() {
                 <img
                   className="img-fluid"
                   src="img/project-5.jpg"
-                  alt=""
+                  alt="Уникальное сочетание цветов не оставляет
+                  равнодушным"
                 />
                 <div className="portfolio-text">
                   <p className="text-white text-center fw-bold p-4">
@@ -918,7 +921,7 @@ export default function Home() {
                 <img
                   className="img-fluid"
                   src="img/project-6.jpg"
-                  alt=""
+                  alt="Продуманная парковая зона с превосходным газоном"
                 />
                 <div className="portfolio-text">
                   <p className="text-white text-center fw-bold p-4">
@@ -947,7 +950,7 @@ export default function Home() {
       </div>
 
       {/* Team */}
-      <div className="container-xxl py-5">
+      <div className="container-xxl py-5" id="team">
         <div className="container">
           <div
             className="text-center mx-auto wow fadeInUp"
@@ -968,7 +971,7 @@ export default function Home() {
                 <img
                   className="img-fluid"
                   src="img/team-1.jpg"
-                  alt=""
+                  alt="Алена Денисова"
                 />
                 <div className="team-text">
                   <h4 className="mb-0">Алена Денисова</h4>
@@ -1004,7 +1007,7 @@ export default function Home() {
                 <img
                   className="img-fluid"
                   src="img/team-2.jpg"
-                  alt=""
+                  alt="Роман Захаров"
                 />
                 <div className="team-text">
                   <h4 className="mb-0">Роман Захаров</h4>
@@ -1040,7 +1043,7 @@ export default function Home() {
                 <img
                   className="img-fluid"
                   src="img/team-3.jpg"
-                  alt=""
+                  alt="Диана Кросс"
                 />
                 <div className="team-text">
                   <h4 className="mb-0">Диана Кросс</h4>
@@ -1073,7 +1076,7 @@ export default function Home() {
       </div>
 
       {/* Testimonial */}
-      <div className="container-xxl py-5">
+      <div className="container-xxl py-5" id="testimonials">
         <div className="container">
           <div className="row g-5">
             <div
@@ -1104,7 +1107,7 @@ export default function Home() {
                   <img
                     className="img-fluid rounded mb-3"
                     src="img/testimonial-1.jpg"
-                    alt=""
+                    alt="Максим Демидов"
                   />
                   <p className="fs-5">
                     Заказывал у GreenGard дизайн внутренненго двора, и
@@ -1120,7 +1123,7 @@ export default function Home() {
                   <img
                     className="img-fluid rounded mb-3"
                     src="img/testimonial-2.jpg"
-                    alt=""
+                    alt="Анна Волевич"
                   />
                   <p className="fs-5">
                     Я была впечатлена работой студии GreenGard.
@@ -1136,7 +1139,7 @@ export default function Home() {
                   <img
                     className="img-fluid rounded mb-3"
                     src="img/testimonial-3.jpg"
-                    alt=""
+                    alt="Артур Лебедев"
                   />
                   <p className="fs-5">
                     Сотрудники GreenGard проявили профессионализм и
@@ -1152,7 +1155,7 @@ export default function Home() {
                   <img
                     className="img-fluid rounded mb-3"
                     src="img/testimonial-4.jpg"
-                    alt=""
+                    alt="Татьяна Яковлева"
                   />
                   <p className="fs-5">
                     Мы заказали у GreenGard дизайн нашего сада, и мы
