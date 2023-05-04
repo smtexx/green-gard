@@ -207,9 +207,9 @@ export default function Home() {
             >
               <h1 className="display-1 text-primary mb-0">15</h1>
               <p className="text-primary mb-4">Лет на рынке</p>
-              <h1 className="display-5 mb-4">
+              <h2 className="display-5 mb-4">
                 Превратим участок в цветущий сад
-              </h1>
+              </h2>
               <p className="mb-4">
                 Наша компания имеет богатый профессиональный опыт и
                 может предложить широкий спектр услуг, которые
@@ -325,7 +325,7 @@ export default function Home() {
       </div>
 
       {/* Features */}
-      <div className="container-xxl py-5" id="advantages">
+      <section className="container-xxl py-5" id="advantages">
         <div className="container">
           <div className="row g-5 align-items-center">
             <div
@@ -415,10 +415,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Service */}
-      <div className="container-xxl py-5" id="services">
+      <section className="container-xxl py-5" id="services">
         <div className="container">
           <div
             className="text-center mx-auto wow fadeInUp"
@@ -625,10 +625,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Quote */}
-      <div
+      <section
         className="container-fluid quote my-5 py-5"
         data-parallax="scroll"
         data-image-src="img/carousel-2.jpg"
@@ -715,10 +715,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Projects */}
-      <div className="container-xxl py-5" id="projects">
+      <section className="container-xxl py-5" id="projects">
         <div className="container">
           <div
             className="text-center mx-auto wow fadeInUp"
@@ -947,10 +947,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Team */}
-      <div className="container-xxl py-5" id="team">
+      <section className="container-xxl py-5" id="team">
         <div className="container">
           <div
             className="text-center mx-auto wow fadeInUp"
@@ -1073,10 +1073,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Testimonial */}
-      <div className="container-xxl py-5" id="testimonials">
+      <section className="container-xxl py-5" id="testimonials">
         <div className="container">
           <div className="row g-5">
             <div
@@ -1170,7 +1170,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }
