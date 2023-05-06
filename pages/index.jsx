@@ -32,7 +32,7 @@ export default function Home() {
                   <div className="row justify-content-center">
                     <div className="col-lg-8">
                       <h1 className="display-1 text-white mb-5 animated slideInDown">
-                        Профессиональный подход
+                        Сад вашей мечты
                       </h1>
                       <a
                         href=""
@@ -631,7 +631,7 @@ export default function Home() {
       <section
         className="container-fluid quote my-5 py-5"
         data-parallax="scroll"
-        data-image-src="img/carousel-2.jpg"
+        data-image-src="img/carousel-3.jpg"
         id="quote"
       >
         <div className="container py-5">

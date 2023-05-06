@@ -41,7 +41,7 @@ export default function MetaTags() {
       <meta property="og:type" content="website" />
       <meta
         property="og:url"
-        content="https://smtexx.github.io/focus"
+        content="https://smtexx.github.io/green-gard"
       />
       <meta
         property="og:title"
